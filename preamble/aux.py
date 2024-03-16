@@ -273,3 +273,55 @@ def dict_results_to_plot(dict_results, title):
 
     # Show plot
     plt.show()
+
+def display_by_name(name, path_versions):
+    files = list_files_in_folder(path_versions)
+    for file in files:
+        name_temp = os.path.splitext(os.path.basename(file))[0]
+        if name == name_temp:
+            print(name)
+            y = load_audio(file, 22050)[:22050*30]
+            display(Audio(y, rate=22050))
+
+def best_cases_display(results):
+    # Sort dictionary items alphabetically by keys
+    sorted_list = sorted(results.items())
+    # Extract keys and values from the sorted list
+    song_names  = [item[0] for item in sorted_list]
+    song_names  = song_names[1:]
+    data_values = [item[1] for item in sorted_list]
+    data1 = [data[0] for data in data_values]
+    data2 = [data[1] for data in data_values]
+    self_comp_1=data1[0]
+    self_comp_2=data2[0]    
+    data1 = data1[1:]
+    data2 = data2[1:]
+    # Find the indices of the best two scores in data0 and data1
+    best_indices_data0 = sorted(range(len(data1)), key=lambda i: data1[i], reverse=True)[:2]
+    best_indices_data1 = sorted(range(len(data2)), key=lambda i: data2[i], reverse=True)[:2]
+    # Extract the names of the samples with the best scores in data0 and data1
+    best_names_data0 = [song_names[i] for i in best_indices_data0]
+    best_names_data1 = [song_names[i] for i in best_indices_data1]
+    # Find the indices of the best two scores in data0 and data1
+    worst_indices_data0 = sorted(range(len(data1)), key=lambda i: data1[i], reverse=False)[:2]
+    worst_indices_data1 = sorted(range(len(data2)), key=lambda i: data2[i], reverse=False)[:2]
+    # Extract the names of the samples with the best scores in data0 and data1
+    worst_names_data0 = [song_names[i] for i in worst_indices_data0]
+    worst_names_data1 = [song_names[i] for i in worst_indices_data1]
+
+    print("\033[1mBest essentia:\033[0m")
+    for best in best_names_data0:
+        display_by_name(best)
+    print("\033[1mBest libfmp:\033[0m")
+    for best in best_names_data1:
+        display_by_name(best)
+    print("")
+    print("\033[1mWorst essentia:\033[0m")
+    for worst in worst_names_data0:
+        display_by_name(best)
+    print("\033[1mWorst libfmp:\033[0m")
+    for worst in worst_names_data1:
+        display_by_name(best)
+    print("")  
+
+
