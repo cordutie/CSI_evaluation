@@ -102,3 +102,5 @@ The scores should be plotted for both algorithms by default.
 ## How to display best/worst results
 
 The function wrapper contained in the scripts main_tester.py and main_dataset.py can be accessed through the Jupyter notebook included in this repository. There we also added some functions to display the worst and best cases for all songs analyzed.
+
+Note: In order to display the audio clip segments that libfmp identifies as similar, set the 'PLot' value as 1. 
