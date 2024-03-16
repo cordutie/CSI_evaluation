@@ -1,6 +1,6 @@
 # MIR Final Project: *Cover Identification using both Essentia and Libfmp*
 
-**Chora Suvi**<sup>1</sup>, **Esteban Gutiérrez**<sup>1</sup>, and **Loca Isa**<sup>1</sup>
+**Esteban Gutiérrez**<sup>1</sup>, **Isabelle Oktay**<sup>1</sup>, and **Suvi Haeaerae**<sup>1</sup>
 
 <sup>1</sup> *Department of Information and Communications Technologies, Universitat Pompeu Fabra* <br>
 
@@ -8,8 +8,8 @@
 
 ## Introduction
 
-Automatic cover detection presents a significant theoretical and practical challenge in Mu-
-sic Information Retrieval (MIR). It plays a crucial role in maintaining comprehensive music
+Automatic cover detection presents a significant theoretical and practical challenge in Music
+Information Retrieval (MIR). It plays a crucial role in maintaining comprehensive music
 databases due to the frequent reinterpretation of songs by different artists and the release
 of alternate versions by original artists. Besides aiding content organization for improved
 music discovery, cover song identification (CSI) also facilitates copyright enforcement and
