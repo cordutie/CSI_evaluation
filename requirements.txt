@@ -1,0 +1,7 @@
+numpy==1.26.3
+librosa==0.10.1
+matplotlib==3.8.2
+pydub==0.25.1
+pytube==15.0.0
+essentia==2.1b6.dev1110
+ipython==7.34.0
