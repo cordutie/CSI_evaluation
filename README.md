@@ -1,6 +1,6 @@
 # MIR Final Project: *Cover Identification using both Essentia and Libfmp*
 
-**Esteban Gutiérrez**<sup>1</sup>, **Isabelle Oktay**<sup>1</sup>, and **Suvi Haeaerae**<sup>1</sup>
+**Esteban Gutiérrez**<sup>1</sup>, **Suvi Haeaerae**<sup>1</sup>, and **Isabelle Oktay**<sup>1</sup>
 
 <sup>1</sup> *Department of Information and Communications Technologies, Universitat Pompeu Fabra* <br>
 
