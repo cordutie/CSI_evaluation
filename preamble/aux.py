@@ -283,7 +283,7 @@ def display_by_name(name, path_versions):
             y = load_audio(file, 22050)[:22050*30]
             display(Audio(y, rate=22050))
 
-def best_cases_display(results):
+def best_cases_display(results, path_versions):
     # Sort dictionary items alphabetically by keys
     sorted_list = sorted(results.items())
     # Extract keys and values from the sorted list
@@ -311,17 +311,17 @@ def best_cases_display(results):
 
     print("\033[1mBest essentia:\033[0m")
     for best in best_names_data0:
-        display_by_name(best)
+        display_by_name(best,path_versions)
     print("\033[1mBest libfmp:\033[0m")
     for best in best_names_data1:
-        display_by_name(best)
+        display_by_name(best,path_versions)
     print("")
     print("\033[1mWorst essentia:\033[0m")
     for worst in worst_names_data0:
-        display_by_name(best)
+        display_by_name(best,path_versions)
     print("\033[1mWorst libfmp:\033[0m")
     for worst in worst_names_data1:
-        display_by_name(best)
+        display_by_name(best,path_versions)
     print("")  
 
 
